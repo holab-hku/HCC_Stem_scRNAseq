@@ -1,0 +1,31 @@
+Source	Annotation	HCC_ALL	HHP_ALL	CHOL_ALL
+GO:BP	Long-chain fatty acid metabolic process	1.74E-10	1	1
+GO:BP	Purine ribonucleotide metabolic process	2.22E-10	1	1
+GO:BP	Detoxification	5.83E-10	1	1
+GO:BP	Regulation of lipid metabolic process	1.74E-09	1	1
+KEGG	Non-alcoholic fatty liver disease	3.22E-09	1	1
+GO:BP	Glycerolipid metabolic process	5.74E-08	1	1
+GO:BP	Xenobiotic metabolic process	1.97E-07	1	1
+REAC	Metabolism of steroids	2.48E-07	1	1
+GO:BP	Fatty acid oxidation	5.58E-05	1	1
+REAC	Complement cascade	0.001356847	1	1
+GO:BP	Muscle cell differentiation	1	4.19E-06	0.076982682
+GO:BP	Regulation of developmental growth	1	4.31E-05	1
+GO:BP	Positive regulation of neuron projection development	1	0.000878513	1
+GO:BP	Mesenchyme development	1	0.001416409	1
+GO:BP	Immune system process	1	0.001856348	1
+WP	PluriNetWork: mechanisms associated with pluripotency	1	0.002419936	0.061005602
+GO:BP	Animal organ morphogenesis	1	0.003601368	1
+GO:BP	Cardiac ventricle development	1	0.009491351	0.364256911
+GO:BP	Leukocyte differentiation	1	0.021157703	1
+GO:BP	Neural precursor cell proliferation	1	0.021656021	0.208827661
+WP	Focal Adhesion	1	0.425157354	0.024061826
+GO:BP	Regulation of epithelial cell differentiation	1	1	0.008472021
+GO:BP	Regulation of microtubule cytoskeleton organization	1	1	0.003609174
+REAC	Membrane Trafficking	1	0.594888516	0.003391263
+GO:BP	Actin filament polymerization	1	0.09226348	0.002062705
+GO:BP	Vacuolar transport	1	0.108486392	0.000971821
+GO:BP	Epithelial cell migration	1	0.230893541	0.000833404
+GO:BP	Regulation of protein transport	1	0.050312511	0.000134664
+GO:BP	Mitotic spindle organization	1	0.099919557	2.04E-06
+GO:BP	Regulation of viral process	1	0.688504715	5.42E-08

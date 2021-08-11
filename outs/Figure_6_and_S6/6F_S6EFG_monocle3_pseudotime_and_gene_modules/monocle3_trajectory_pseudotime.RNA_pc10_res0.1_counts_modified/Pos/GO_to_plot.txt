@@ -1,0 +1,126 @@
+source	term_name	adjusted_p_value	intersection_size	Module	Print
+GO:BP	regulation of protein stability	1	6	4	N
+GO:BP	DNA repair	1	1	4	N
+GO:BP	autophagy	1	6	4	N
+GO:BP	apoptotic signaling pathway	0.323661494	24	4	N
+GO:BP	mitotic cell cycle process	1	13	4	N
+GO:BP	regulation of RNA splicing	1	2	4	N
+GO:BP	DNA replication	1	-1	4	N
+GO:BP	cell division	1	10	4	N
+GO:BP	cell cycle checkpoint signaling	1	4	4	N
+GO:BP	energy derivation by oxidation of organic compounds	1	5	4	N
+GO:BP	negative regulation of cell death	0.000487568	45	4	Y
+GO:BP	cell migration	8.67E-06	59	4	Y
+GO:BP	Wnt signaling pathway	1	11	4	N
+GO:BP	response to growth factor	1	22	4	N
+GO:BP	regulation of cell morphogenesis	1	10	4	N
+GO:BP	canonical Wnt signaling pathway	1	10	4	N
+GO:BP	epithelial cell differentiation	1	19	4	N
+GO:BP	regulation of cell population proliferation	2.61E-06	67	4	Y
+GO:BP	oxidative phosphorylation	1	1	4	N
+GO:BP	ATP metabolic process	1	6	4	N
+GO:BP	detoxification	1	3	4	N
+GO:BP	reactive oxygen species metabolic process	1	8	4	N
+GO:BP	cell cycle G2/M phase transition	1	3	4	N
+GO:BP	positive regulation of angiogenesis	0.000701718	15	4	Y
+GO:BP	cell-cell adhesion	0.025074303	33	4	Y
+GO:BP	regulation of protein stability	1	24	2	N
+GO:BP	DNA repair	1	37	2	N
+GO:BP	autophagy	1	31	2	N
+GO:BP	apoptotic signaling pathway	1	57	2	N
+GO:BP	mitotic cell cycle process	1	37	2	N
+GO:BP	regulation of RNA splicing	1	7	2	N
+GO:BP	DNA replication	1	23	2	N
+GO:BP	cell division	1	37	2	N
+GO:BP	cell cycle checkpoint signaling	1	5	2	N
+GO:BP	energy derivation by oxidation of organic compounds	6.85E-17	73	2	Y
+GO:BP	negative regulation of cell death	1	88	2	N
+GO:BP	cell migration	1	98	2	N
+GO:BP	Wnt signaling pathway	1	20	2	N
+GO:BP	response to growth factor	1	45	2	N
+GO:BP	regulation of cell morphogenesis	1	21	2	N
+GO:BP	canonical Wnt signaling pathway	1	9	2	N
+GO:BP	epithelial cell differentiation	1	35	2	N
+GO:BP	regulation of cell population proliferation	1	131	2	N
+GO:BP	oxidative phosphorylation	1.05E-22	50	2	Y
+GO:BP	ATP metabolic process	2.28E-19	71	2	Y
+GO:BP	detoxification	9.49E-14	41	2	Y
+GO:BP	reactive oxygen species metabolic process	1.4E-06	45	2	Y
+GO:BP	cell cycle G2/M phase transition	1	6	2	N
+GO:BP	positive regulation of angiogenesis	1	14	2	N
+GO:BP	cell-cell adhesion	1	51	2	N
+GO:BP	regulation of protein stability	1	2	3	N
+GO:BP	DNA repair	1.81E-13	20	3	N
+GO:BP	autophagy	1	-1	3	N
+GO:BP	apoptotic signaling pathway	1	-1	3	N
+GO:BP	mitotic cell cycle process	2.26E-14	23	3	Y
+GO:BP	regulation of RNA splicing	1	-1	3	N
+GO:BP	DNA replication	5.85E-21	21	3	Y
+GO:BP	cell division	1.73E-14	22	3	Y
+GO:BP	cell cycle checkpoint signaling	0.001242359	7	3	Y
+GO:BP	energy derivation by oxidation of organic compounds	1	2	3	N
+GO:BP	negative regulation of cell death	1	7	3	N
+GO:BP	cell migration	1	3	3	N
+GO:BP	Wnt signaling pathway	1	-1	3	N
+GO:BP	response to growth factor	1	4	3	N
+GO:BP	regulation of cell morphogenesis	1	1	3	N
+GO:BP	canonical Wnt signaling pathway	1	-1	3	N
+GO:BP	epithelial cell differentiation	1	1	3	N
+GO:BP	regulation of cell population proliferation	1	6	3	N
+GO:BP	oxidative phosphorylation	1	1	3	N
+GO:BP	ATP metabolic process	1	1	3	N
+GO:BP	detoxification	1	-1	3	N
+GO:BP	reactive oxygen species metabolic process	1	-1	3	N
+GO:BP	cell cycle G2/M phase transition	2.79E-05	8	3	Y
+GO:BP	positive regulation of angiogenesis	1	-1	3	N
+GO:BP	cell-cell adhesion	1	1	3	N
+GO:BP	regulation of protein stability	1.37E-18	153	5	Y
+GO:BP	DNA repair	1.04E-17	224	5	Y
+GO:BP	autophagy	1.92E-17	202	5	Y
+GO:BP	apoptotic signaling pathway	1.29E-13	247	5	Y
+GO:BP	mitotic cell cycle process	1.72E-10	261	5	N
+GO:BP	regulation of RNA splicing	2.8E-06	75	5	Y
+GO:BP	DNA replication	0.00029406	102	5	N
+GO:BP	cell division	0.000373079	207	5	N
+GO:BP	cell cycle checkpoint signaling	0.0007624	68	5	N
+GO:BP	energy derivation by oxidation of organic compounds	0.411345624	107	5	N
+GO:BP	negative regulation of cell death	0.651860442	344	5	N
+GO:BP	cell migration	1	336	5	N
+GO:BP	Wnt signaling pathway	1	105	5	N
+GO:BP	response to growth factor	1	174	5	N
+GO:BP	regulation of cell morphogenesis	1	94	5	N
+GO:BP	canonical Wnt signaling pathway	1	70	5	N
+GO:BP	epithelial cell differentiation	1	151	5	N
+GO:BP	regulation of cell population proliferation	1	397	5	N
+GO:BP	oxidative phosphorylation	1	33	5	N
+GO:BP	ATP metabolic process	1	87	5	N
+GO:BP	detoxification	1	25	5	N
+GO:BP	reactive oxygen species metabolic process	1	59	5	N
+GO:BP	cell cycle G2/M phase transition	1	50	5	N
+GO:BP	positive regulation of angiogenesis	1	35	5	N
+GO:BP	cell-cell adhesion	1	148	5	N
+GO:BP	regulation of protein stability	0.161026039	57	1	N
+GO:BP	DNA repair	0.119577268	87	1	N
+GO:BP	autophagy	1.71E-09	103	1	N
+GO:BP	apoptotic signaling pathway	0.239141484	100	1	N
+GO:BP	mitotic cell cycle process	0.000135542	125	1	N
+GO:BP	regulation of RNA splicing	1	32	1	N
+GO:BP	DNA replication	1	40	1	N
+GO:BP	cell division	0.00738418	105	1	N
+GO:BP	cell cycle checkpoint signaling	1	30	1	N
+GO:BP	energy derivation by oxidation of organic compounds	1	33	1	N
+GO:BP	negative regulation of cell death	0.125686607	174	1	N
+GO:BP	cell migration	7.76E-20	303	1	N
+GO:BP	Wnt signaling pathway	2.6E-16	115	1	Y
+GO:BP	response to growth factor	1.38E-15	164	1	Y
+GO:BP	regulation of cell morphogenesis	4.31E-13	92	1	Y
+GO:BP	canonical Wnt signaling pathway	9.56E-12	83	1	Y
+GO:BP	epithelial cell differentiation	3.76E-09	139	1	Y
+GO:BP	regulation of cell population proliferation	2.55E-06	287	1	N
+GO:BP	oxidative phosphorylation	1	4	1	N
+GO:BP	ATP metabolic process	1	28	1	N
+GO:BP	detoxification	1	10	1	N
+GO:BP	reactive oxygen species metabolic process	1	33	1	N
+GO:BP	cell cycle G2/M phase transition	1	23	1	N
+GO:BP	positive regulation of angiogenesis	1	33	1	N
+GO:BP	cell-cell adhesion	1	122	1	N

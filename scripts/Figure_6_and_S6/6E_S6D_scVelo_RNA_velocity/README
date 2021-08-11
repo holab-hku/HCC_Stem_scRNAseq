@@ -1,0 +1,4 @@
+
+
+
+The figures are essentially reproducible using scVelo v0.2.4 (4_run_scVelo.ipynb). Original figures used in manuscript were ran with scVelo v0.2.3.dev34+gf7498c1 and therefore look marginally different (outs/Figure_6_and_S6/6E_S6D_scVelo_RNA_velocity).
