@@ -37,36 +37,7 @@ library(GENIE3)
 library(SCENIC)
 library(tidyverse)
 library(patchwork)
-
-##############Load mouse cistarget information (mc9nr: Motif collection version 9: 24k motifs)
-# dbFiles <- c("https://resources.aertslab.org/cistarget/databases/mus_musculus/mm9/refseq_r45/mc9nr/gene_based/mm9-500bp-upstream-7species.mc9nr.feather",
-#              "https://resources.aertslab.org/cistarget/databases/mus_musculus/mm9/refseq_r45/mc9nr/gene_based/mm9-tss-centered-10kb-7species.mc9nr.feather")
-# dir.create("cisTarget_databases")
-# setwd("cisTarget_databases") # if needed
-# for(featherURL in dbFiles)
-# {
-#   download.file(featherURL, destfile=basename(featherURL)) # saved in current dir
-# }
-# setwd("..//")
-##############Load Seurat data
-# HCC.final.SCT <- readRDS ("../HCC.final.SCT_pc10_res0.1.rds")
-# DefaultAssay(HCC.final.SCT) <- "SCT"
-
-##准备表达矩阵
-# Idents(HCC.final.SCT) <- "type"
-# Neg <- subset(HCC.final.SCT, idents= "Neg")
-# Pos <- subset(HCC.final.SCT, idents= "Pos")
-# cells.to.sample <- length(Neg$orig.ident)
-# set.seed(111)
-# sampled.cells <- sample(Pos$orig.ident, size = cells.to.sample, replace = F)
-# cells.to.subset <- c(sampled.cells, Neg$orig.ident)
-# cells.to.subset<-as.data.frame(cells.to.subset)
-# HCC.final.SCT <- subset(HCC.final.SCT, cells = rownames(cells.to.subset))
-# remove(Neg)
-# remove(Pos)
-# 
-# saveRDS(HCC.final.SCT, "HCC.final.SCT.rds")
-
+library(arrow)
 
 dir <- "HCC_Stem_scRNAseq"
 ##########################
@@ -110,6 +81,32 @@ colVars$CellType <- colVars$CellType[intersect(names(colVars$CellType), cellInfo
 saveRDS(colVars, file=paste0(SCENIC_dir,"/colVars.Rds"))
 #plot.new(); legend(0,1, fill=colVars$CellType, legend=names(colVars$CellType))
 
+
+#https://resources.aertslab.org/cistarget/databases/mus_musculus/mm9/refseq_r45/mc9nr/gene_based/
+#download:
+#mm9-tss-centered-10kb-7species.mc9nr.feather
+#mm9-500bp-upstream-7species.mc9nr.feather
+#mm9-tss-centered-10kb-7species.mc9nr.feather.zsync
+#mm9-tss-centered-10kb-7species.mc9nr.feather.gosync
+#mm9-500bp-upstream-7species.mc9nr.feather.zsync
+#mm9-500bp-upstream-7species.mc9nr.feather.gosync
+#and place files in data_subpath/cisTarget_databases
+dbDir <- paste0(data_subpath,"/cisTarget_databases") # RcisTarget databases location
+
+
+
+#CANNOT COMPLETE
+#dbFiles <- c("https://resources.aertslab.org/cistarget/databases/mus_musculus/mm9/refseq_r45/mc9nr/gene_based/mm9-500bp-upstream-7species.mc9nr.feather",
+#              "https://resources.aertslab.org/cistarget/databases/mus_musculus/mm9/refseq_r45/mc9nr/gene_based/mm9-tss-centered-10kb-7species.mc9nr.feather")
+#dir.create("cisTarget_databases")
+# setwd("cisTarget_databases") # if needed
+#for(featherURL in dbFiles) {
+#	download.file(featherURL, destfile= paste0(dbDir, "/", basename(featherURL) )) # saved in current dir
+#}
+
+
+
+
 ##############Initialize settings (check sha256sum before this step)
 
 # mydbs <- c("mm9-500bp-upstream-7species.mc9nr.feather",
@@ -121,11 +118,10 @@ saveRDS(colVars, file=paste0(SCENIC_dir,"/colVars.Rds"))
 #                                   dbs = mydbs,
 #                                   datasetTitle = "HCC.final.SCT_SCENIC")
 
+#setwd(SCENIC_dir)
+
 org <- "mgi" # or hgnc, or dmel
 
-#https://resources-mirror.aertslab.org/cistarget/databases/mus_musculus/mm9/refseq_r45/mc9nr/gene_based/
-#place files in data_subpath/cisTarget_databases
-dbDir <- paste0(data_subpath,"/cisTarget_databases") # RcisTarget databases location
 myDatasetTitle <- "HCC.final.SCT_SCENIC" # choose a name for your analysis
 data(defaultDbNames)
 dbs <- defaultDbNames[[org]]
