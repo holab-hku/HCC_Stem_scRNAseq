@@ -81,7 +81,12 @@ colVars$CellType <- colVars$CellType[intersect(names(colVars$CellType), cellInfo
 saveRDS(colVars, file=paste0(SCENIC_dir,"/colVars.Rds"))
 #plot.new(); legend(0,1, fill=colVars$CellType, legend=names(colVars$CellType))
 
+###
+#db_num <- 1
+db_num <- 2
+##
 
+#db_num 1
 #https://resources.aertslab.org/cistarget/databases/mus_musculus/mm9/refseq_r45/mc9nr/gene_based/
 #download:
 #mm9-tss-centered-10kb-7species.mc9nr.feather
@@ -91,40 +96,40 @@ saveRDS(colVars, file=paste0(SCENIC_dir,"/colVars.Rds"))
 #mm9-500bp-upstream-7species.mc9nr.feather.zsync
 #mm9-500bp-upstream-7species.mc9nr.feather.gosync
 #and place files in data_subpath/cisTarget_databases
-dbDir <- paste0(data_subpath,"/cisTarget_databases") # RcisTarget databases location
 
+#db_num_2
+#https://resources.aertslab.org/cistarget/databases/mus_musculus/mm10/refseq_r80/mc9nr/gene_based/
+#download:
+#mm10__refseq-r80__10kb_up_and_down_tss.mc9nr.feather
+#mm10__refseq-r80__10kb_up_and_down_tss.mc9nr.feather.gosync
+#mm10__refseq-r80__10kb_up_and_down_tss.mc9nr.feather.zsync
+#mm10__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.feather
+#mm10__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.feather.gosync
+#mm10__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.feather.zsync
+#and place in data_subpath/cisTarget_databases_2
 
-
-#CANNOT COMPLETE
-#dbFiles <- c("https://resources.aertslab.org/cistarget/databases/mus_musculus/mm9/refseq_r45/mc9nr/gene_based/mm9-500bp-upstream-7species.mc9nr.feather",
-#              "https://resources.aertslab.org/cistarget/databases/mus_musculus/mm9/refseq_r45/mc9nr/gene_based/mm9-tss-centered-10kb-7species.mc9nr.feather")
-#dir.create("cisTarget_databases")
-# setwd("cisTarget_databases") # if needed
-#for(featherURL in dbFiles) {
-#	download.file(featherURL, destfile= paste0(dbDir, "/", basename(featherURL) )) # saved in current dir
-#}
-
-
-
-
-##############Initialize settings (check sha256sum before this step)
-
-# mydbs <- c("mm9-500bp-upstream-7species.mc9nr.feather",
-#            "mm9-tss-centered-10kb-7species.mc9nr.feather")
-# names(mydbs) <- c("500bp", "10kb")
-# scenicOptions <- initializeScenic(org="mgi", 
-#                                   nCores=1,
-#                                   dbDir=cisTarget_databases, 
-#                                   dbs = mydbs,
-#                                   datasetTitle = "HCC.final.SCT_SCENIC")
-
-#setwd(SCENIC_dir)
+########################################################################################
+if (db_num==1) {
+	dbDir <- paste0(data_subpath,"/cisTarget_databases") # RcisTarget databases location
+} else if (db_num==2) {
+	dbDir <- paste0(data_subpath,"/cisTarget_databases_2") # RcisTarget databases location
+}
+########################################################################################
 
 org <- "mgi" # or hgnc, or dmel
 
 myDatasetTitle <- "HCC.final.SCT_SCENIC" # choose a name for your analysis
 data(defaultDbNames)
-dbs <- defaultDbNames[[org]]
+
+if (db_num==1) {
+	dbs <- defaultDbNames[[org]]
+	minCountsPerGene_factor <- 3
+} else if (db_num==2) {
+	dbs <- c("mm10__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.feather", "mm10__refseq-r80__10kb_up_and_down_tss.mc9nr.feather")
+	names(dbs) <- c("500bp", "10kb")
+	minCountsPerGene_factor <- 1
+}
+
 scenicOptions <- initializeScenic(org=org, dbDir=dbDir, dbs=dbs, datasetTitle=myDatasetTitle, nCores=10) 
 
 saveRDS(scenicOptions, paste0(SCENIC_dir,"/scenicOptions.rds"))
@@ -133,7 +138,7 @@ saveRDS(scenicOptions, paste0(SCENIC_dir,"/scenicOptions.rds"))
 ## Gene filter/selection
 genesKept <- geneFiltering(exprMat, 
                            scenicOptions, 
-                           minCountsPerGene=3*.01*ncol(exprMat),
+                           minCountsPerGene=minCountsPerGene_factor*.01*ncol(exprMat),
                            minSamples=ncol(exprMat)*.01)
 
 # check whether any known relevant genes are filtered-out 
@@ -225,10 +230,10 @@ plotly::ggplotly(rssPlot$plot)
 
 
 #Extract cell information
-HCC.final.SCT$cluster_type <- paste0("C", HCC.final.SCT$seurat_clusters, "_", HCC.final.SCT$type)
-Idents(HCC.final.SCT) <- "cluster_type"
-cellInfo <- data.frame(seuratCluster=Idents(HCC.final.SCT))
+#HCC.final.SCT$cluster_type <- paste0("C", HCC.final.SCT$seurat_clusters, "_", HCC.final.SCT$type)
+#Idents(HCC.final.SCT) <- "cluster_type"
+#cellInfo <- data.frame(seuratCluster=Idents(HCC.final.SCT))
 
 #Extract expression matrix
-expr <- GetAssayData(object = HCC.final.SCT, assay= "SCT", slot = "data") 
-expr <- as(Class = 'matrix', object = expr)
+#expr <- GetAssayData(object = HCC.final.SCT, assay= "SCT", slot = "data") 
+#expr <- as(Class = 'matrix', object = expr)
