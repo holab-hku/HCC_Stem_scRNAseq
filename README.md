@@ -1,6 +1,6 @@
 # Code repository for the following study:
 
-Lei Zhou#, Ken HO Yu#, Tin-Lok Wong#, Zhao Zhang, Chun-Ho Chan, Jane HC Loong, Noélia Che, Hua-Jian Yu, Kel Vin Tan, Man Tong, Elly SW Ngan, Joshua WK Ho, Stephanie Ma. Lineage tracing and single-cell analysis reveal proliferative Prom1+ tumor-propagating cells and their dynamic cellular transition during liver cancer progression. 2021
+[Zhou L#, Yu KH#, Wong TL#, Zhang Z, Chan CH, Loong JH, Che N, Yu HJ, Tan KV, Tong M, Ngan ES, Ho JW^, Ma S^. Lineage tracing and single-cell analysis reveal proliferative Prom1+ tumor-propagating cells and their dynamic cellular transition during liver cancer progression. _Gut_ 2021 Sep 29. PMID: 34588223](https://pubmed.ncbi.nlm.nih.gov/34588223/)
 
 This repository contains the scripts which produced the bioinformatics figures in the paper, namely Figures 5, S5, 6, S6, 7, S7, and S9. It also contains some processed input data required by the scripts, and the direct outputs of the scripts (the Figures) as well as some intermediate outputs. Processed data required that are too large to be placed here can be downloaded in the links below (Recommended downloads).
 
